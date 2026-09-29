@@ -1,0 +1,7 @@
+{
+  "name": "Utaite Resource Hub",
+  "description": "A beginner-friendly educational and resource hub for aspiring utaite, online cover singers, and Japanese music cover creators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
