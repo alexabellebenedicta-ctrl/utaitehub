@@ -31,8 +31,8 @@ export function Footer({ onNavigate }: FooterProps) {
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-md bg-[#EEEBFF] flex items-center justify-center text-[#6C5CE7]">
-                <Music className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center border border-[#E7E7EA] shadow-2xs">
+                <img src="/favicon.svg" alt="UtaiteHub Emblem" className="w-full h-full object-cover" />
               </div>
               <span className="font-heading text-lg font-bold tracking-tight text-[#18181B]">
                 Utaite<span className="text-[#6C5CE7]">Hub</span>

@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#FCFCFD"/>
+      <stop offset="45%" stop-color="#F7F5FC"/>
+      <stop offset="100%" stop-color="#ECE7F9"/>
+    </linearGradient>
+
+    <radialGradient id="bgCenterGlow" cx="0.45" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#EEE9FA" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E2DCF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- U Main Body Gradient (Deep Midnight Violet) -->
+    <linearGradient id="uDarkGrad" x1="0.2" y1="0.1" x2="0.8" y2="0.9">
+      <stop offset="0%" stop-color="#362E52"/>
+      <stop offset="35%" stop-color="#231C38"/>
+      <stop offset="85%" stop-color="#19142A"/>
+      <stop offset="100%" stop-color="#261E3E"/>
+    </linearGradient>
+
+    <!-- U Lavender Ribbon Facet (Inner Curved Shading) -->
+    <linearGradient id="ribbonGrad" x1="0" y1="0.2" x2="1" y2="0.8">
+      <stop offset="0%" stop-color="#A597E8"/>
+      <stop offset="40%" stop-color="#8474CE"/>
+      <stop offset="80%" stop-color="#6756B8"/>
+      <stop offset="100%" stop-color="#493B8C"/>
+    </linearGradient>
+
+    <!-- Flag Gradient -->
+    <linearGradient id="flagGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#231B39"/>
+      <stop offset="45%" stop-color="#3C325F"/>
+      <stop offset="80%" stop-color="#7668BC"/>
+      <stop offset="100%" stop-color="#9C8EE2"/>
+    </linearGradient>
+
+    <!-- Orbit Ring Gradient -->
+    <linearGradient id="orbitGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9A88F7" stop-opacity="0.85"/>
+      <stop offset="30%" stop-color="#C2B6FC"/>
+      <stop offset="60%" stop-color="#EAE5FE"/>
+      <stop offset="85%" stop-color="#A898F8"/>
+      <stop offset="100%" stop-color="#8F7CF4" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Orbit Glow Filter -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base Canvas -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)" stroke="#E5E0F4" stroke-width="2"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgCenterGlow)"/>
+
+  <!-- Left Waveform Sound Bars -->
+  <g fill="#9D95E4" opacity="0.88">
+    <rect x="88" y="222" width="7" height="66" rx="3.5"/>
+    <rect x="102" y="212" width="7" height="86" rx="3.5"/>
+    <rect x="116" y="196" width="7" height="118" rx="3.5"/>
+    <rect x="130" y="214" width="7" height="82" rx="3.5"/>
+    <rect x="144" y="226" width="7" height="58" rx="3.5"/>
+    <!-- Small accent dot -->
+    <circle cx="158" cy="232" r="3.5"/>
+  </g>
+
+  <!-- Lower-Right Horizontal Track Crosshair & Dots -->
+  <g fill="#A69EE4" opacity="0.85">
+    <circle cx="344" cy="358" r="3"/>
+    <rect x="353" y="355.5" width="50" height="5" rx="2.5" fill="#BFB8EE"/>
+    <rect x="388" y="347" width="5" height="22" rx="2.5"/>
+    <circle cx="412" cy="358" r="3"/>
+  </g>
+
+  <!-- Orbit Ring (Back Arc) -->
+  <g transform="translate(254, 280) rotate(-18)">
+    <path d="M -180,0 A 180 48 0 0 1 180,0" fill="none" stroke="url(#orbitGrad)" stroke-width="8" opacity="0.55" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central "U" + Eighth Note Flag Structure -->
+  <!-- Main U Silhouette & 3D Shading -->
+  <g id="utaite-letter">
+    <!-- Base Shape of U and Stem -->
+    <!-- Left serif flare, left stroke down, bottom bowl curve, right stem up into flag -->
+    <path d="
+      M 152 175
+      C 176 175, 185 186, 182 208
+      L 165 316
+      C 158 358, 186 392, 235 392
+      C 285 392, 318 356, 326 308
+      L 348 145
+      C 349 135, 345 125, 332 118
+      L 324 116
+      C 328 116, 334 118, 342 125
+      C 356 138, 386 160, 404 185
+      C 421 208, 419 228, 405 236
+      C 390 245, 368 214, 354 196
+      L 338 298
+      C 330 368, 285 414, 218 414
+      C 152 414, 118 368, 126 302
+      L 142 206
+      C 144 188, 134 177, 114 175
+      Z
+    " fill="url(#uDarkGrad)"/>
+
+    <!-- Inner 3D Facet/Ribbon across U bowl and inner curve -->
+    <path d="
+      M 182 208
+      L 165 316
+      C 158 358, 186 392, 235 392
+      C 268 392, 296 374, 312 344
+      C 292 368, 262 380, 232 380
+      C 192 380, 172 352, 178 316
+      L 194 220
+      C 196 210, 192 206, 182 208
+      Z
+    " fill="url(#ribbonGrad)" opacity="0.9"/>
+
+    <!-- Flag Facet (Upper Note Flag with Gradient) -->
+    <path d="
+      M 326 120
+      C 334 125, 352 145, 372 172
+      C 392 200, 412 222, 405 234
+      C 395 240, 378 218, 362 196
+      C 350 180, 342 165, 336 150
+      Z
+    " fill="url(#flagGrad)"/>
+
+    <!-- Outer Rim Highlight for 3D Edge Pop -->
+    <path d="
+      M 166 322
+      C 160 360, 186 390, 230 390
+      C 275 390, 308 360, 318 322
+    " fill="none" stroke="#B8ABFA" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Orbit Ring (Front Arc passing in front of U) -->
+  <g transform="translate(254, 280) rotate(-18)">
+    <path d="M 180,0 A 180 48 0 0 1 -180,0" fill="none" stroke="url(#orbitGrad)" stroke-width="9" stroke-linecap="round" filter="url(#softGlow)"/>
+    <!-- Crisp Inner White Core of Orbit -->
+    <path d="M 175,0 A 175 46 0 0 1 -175,0" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.85" stroke-linecap="round"/>
+  </g>
+
+  <!-- 4-Point Star on Right Side of Orbit -->
+  <g transform="translate(365, 268)" filter="url(#starGlow)">
+    <!-- Glow aura -->
+    <path d="M 0,-20 Q 0,0 20,0 Q 0,0 0,20 Q 0,0 -20,0 Q 0,0 0,-20 Z" fill="#8B7CE8" opacity="0.35"/>
+    <!-- Star body -->
+    <path d="M 0,-15 Q 0,0 15,0 Q 0,0 0,15 Q 0,0 -15,0 Q 0,0 0,-15 Z" fill="#8876E8"/>
+    <!-- Star core -->
+    <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Inner Sparkle inside lower "U" -->
+  <g transform="translate(196, 348)">
+    <path d="M 0,-11 Q 0,0 11,0 Q 0,0 0,11 Q 0,0 -11,0 Q 0,0 0,-11 Z" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+  </g>
+</svg>

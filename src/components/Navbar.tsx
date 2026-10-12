@@ -38,8 +38,8 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-2.5 text-left focus:outline-none group"
           >
-            <div className="w-8 h-8 rounded-md bg-[#EEEBFF] flex items-center justify-center text-[#6C5CE7] transition-colors">
-              <Music className="w-4 h-4" />
+            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center border border-[#E7E7EA] shadow-2xs group-hover:border-[#6C5CE7]/30 transition-all">
+              <img src="/favicon.svg" alt="UtaiteHub Emblem" className="w-full h-full object-cover" />
             </div>
             <div className="flex items-center gap-2">
               <span className="font-heading text-lg font-bold tracking-tight text-[#18181B]">
